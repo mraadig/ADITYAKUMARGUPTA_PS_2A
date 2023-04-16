@@ -1,0 +1,33 @@
+class Solution {
+    public String reverseVowels(String s) {
+		String nstr="";
+		String mstr="";
+		char ch;
+		int h=0;
+	
+	for (int i=0; i<s.length(); i++)
+	{
+		ch= s.charAt(i); 
+		if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'||ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U')
+		nstr= ch+nstr; 
+	}
+	for(int j=0; j<s.length(); j++)
+	{    
+	    ch=s.charAt(j);
+	    if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'||ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U')
+	    {  
+	       if(h<nstr.length())
+	       ch=nstr.charAt(h);
+	       mstr=mstr+ch;
+	       h++;
+	     }
+	    else
+	    { mstr=mstr+ch;
+	       } 
+         }
+        System.out.println(mstr);
+				return mstr;
+        }
+				
+	
+	}
